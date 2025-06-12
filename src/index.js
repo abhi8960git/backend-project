@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
-import { app } from "./app";
-import { DB_NAME } from "./constants";
+import { app } from "./app.js";
 import dotenv from 'dotenv'
-import connectDB from "./db";
+import connectDB from "./db/index.js";
 
 dotenv.config({
     path:'./env'
@@ -16,6 +15,8 @@ connectDB()
 .catch((err)=>{
     console.log("MONGO DB CONNECTION FAILED",err);
 })
+
+
 // effiy fns
 
 /*
