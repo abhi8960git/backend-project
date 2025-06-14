@@ -7,7 +7,9 @@ const storage = multer.diskStorage({
   filename: function (req, file, cb) {
     cb(null, file.originalname)//can got issue of same file name from user side 
   }
-})
+});
 
 
-const upload = multer({ storage })
+const upload = multer({ storage });
+
+export {upload};
